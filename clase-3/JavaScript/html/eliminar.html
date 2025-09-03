@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Eliminacion</title>
+</head>
+<body>
+    <p id="sec">Programacion de aplicaiones web</p>
+    <ul>
+        <li>HTML Basico</li>
+    </ul>
+    <div id="contenedor">
+        <p id="parrafo1">Este es el primer párrafo</p>
+        <p id="parrafo2">Esta es el segundo párrafo</p>
+    </div>
+    <button onclick="miFunction()">Probar</button>
+    <script >
+        //usando remove
+        // function miFunction(){
+        //     let parrafo = document.getElementById("sec");
+        //     parrafo.remove();
+        // }
+        //usando removeChild
+        function miFunction(){
+            let padre = document.getElementById("contenedor");
+            let hijo = document.getElementById("parrafo1");
+            padre.removeChild(hijo);
+        }
+
+    </script>
+</body>
+</html>
