@@ -13,9 +13,11 @@
             }
             else {
                 echo "<b>".$mysqli->host_info."<b>";
-                $name="'Carlos'";
-                $dni=15046783;
-                $mysqli->query("INSERT INTO personas(nombre,dni) VALUES (".$name.",".$dni.")");
+                $statement=$mysqli->prepare("INSERT INTO personas(nombre,dni) VALUES (?,?)");
+                $name='Pedro';
+                $dni = 39056759;
+                $statement->bind_param("si", $name, $dni); // "is" significa que $id está enlazado como un integer y $label como un string
+                $statement->execute();
             }
         ?>
     </body>
