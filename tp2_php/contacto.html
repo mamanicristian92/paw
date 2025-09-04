@@ -1,0 +1,22 @@
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Contactame</title>
+    </head>
+        <body>
+        <h3>Envíanos un correo con tu idea</h3>
+        <h4>Rellena los campos</h4>
+        <form action="sendemail.php" method="post">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" autocomplete="off"><br>
+            <label for="cc">Asunto&nbsp;&nbsp;</label>
+            <input type="text" id="asunto" name="asunto" autocomplete="off"><br>
+            <label for="name">Para:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="text" id="destinatario" name="destinatario" value="mamanicristian92@gmail.com" autocomplete="off"><br>
+            <label for="message">Mensaje</label><br>
+            <textarea type="text" id="message" name="message" rows="10" cols="35"></textarea>
+            <br>
+            <input type="submit" value="Enviar Correo">
+        </form>
+    </body>
+</html>
